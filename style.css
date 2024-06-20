@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap');
+
+
+* {
+  margin: 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+/* ------------------ ESSENTIALS ------------------  */
+
+ul {
+  list-style-type: none;
+}
+
+a { 
+  text-decoration: none;
+}
+
+.text-xl {
+  font-size : 2.4em;
+}
+
+.text-lg {
+  font-size : 30px
+}
+
+.text-md {
+  font-size : 24px;
+  
+}
+
+.text-sm {
+  font-size : 18px;
+  line-height: 1.75rem;
+}
+
+.text-weight-sm { 
+  font-weight : 200
+}
+
+.text-weight-md { 
+  font-weight : 400
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.font-main {
+  font-family : 'Josefin Sans', sans-serif;
+}
+
+.bold { 
+  font-weight: 700;
+}
+
+.color-main {
+  color: #5B21B6;;
+}
+
+.color-transparent { 
+  color: rgba(0, 0, 0, 0.6);;
+}
+
+
+
+.padding-sides-sm {
+  padding : 0px 8px
+}
+
+.padding-sides-md {
+  padding : 0px 16px
+}
+
+.padding-top-md { 
+  padding: 16px 0 0 0;
+}
+
+.padding-top-sm {
+  padding: 8px 0 0 0;
+}
+
+.padding-full { 
+  padding: 16px;
+}
+
+
+/*------------------- NAVBAR --------------------*/
+
+header {
+  height: 9vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav { 
+  max-width: 1050px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0 0 0;
+}
+
+#logo { 
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+  gap: 6px;
+}
+
+
+#logo span {
+  font-size: 1.3em;
+}
+
+.fa-cart-shopping{
+  font-size: 1.3em;
+  color: #5B21B6;
+}
+
+/* ---------------------  MAIN --------------------- */ 
+
+main { 
+  max-width: 960px;
+  margin: auto;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  gap: 15px;
+}
+
+
+
+/* ---------------------  CARDS --------------------- */ 
+
+#cards {
+  max-width: 960px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  gap: 100px;
+
+}
+
+
+
+.card {
+  height: 500px;
+  width: 290px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+
+}
+
+
+#image { 
+  width: 290px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 5px 5px -2px #888; */
+}
+
+
+#image img{
+  width: 100%;
+}
+
+#image img:hover { 
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out; 
+}
+
+#title h1 { 
+  padding: 16px 16px 0 16px;
+}
+
+#price{
+  position: absolute;
+  background-color: #F5F3FF;
+  /* left: 200px; */
+  right: 0;
+  bottom: 20px;
+  padding: 8px 15px 4px 32px;
+}
+
+#price::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border: 1em solid transparent;
+  border-left-color:white;
+}
+
+
+/* ---------------------  FOOTER --------------------- */ 
+
+footer {
+  height: 15vh;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+  #cards {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  #cards {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}
